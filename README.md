@@ -1,16 +1,54 @@
-# React + Vite
+# Pizzería Mamma Mia
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Página de inicio de la pizzería Mamma Mia, hecha con React y Vite. Muestra un encabezado, una barra de navegación y tres pizzas con sus ingredientes y precio.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Node.js](https://nodejs.org/) 18 o superior
 
-## React Compiler
+## Cómo ejecutarlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+La app queda disponible en `http://localhost:5173`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Otros comandos:
+
+| Comando | Qué hace |
+| --- | --- |
+| `npm run build` | Genera la versión de producción en `dist/` |
+| `npm run preview` | Sirve esa versión para probarla en local |
+| `npm run lint` | Revisa el código con Oxlint |
+
+## Qué incluye
+
+- Barra de navegación con inicio, login y registro, y el total del carrito.
+- Encabezado de la pizzería.
+- Tres tarjetas de pizza: Napolitana, Española y Pepperoni.
+- Precios formateados en pesos chilenos (por ejemplo, `$5.950`).
+- Pie de página.
+
+## Estructura
+
+```text
+src/
+  components/
+    Navbar.jsx      Barra de navegación
+    Header.jsx      Encabezado
+    Home.jsx        Página principal y listado de pizzas
+    CardPizza.jsx   Tarjeta de una pizza
+    Footer.jsx      Pie de página
+  utils/
+    formatPrice.js  Formato de precios
+  App.jsx
+  main.jsx
+```
+
+## Tecnologías
+
+- React 19
+- Vite
+- Bootstrap 5
